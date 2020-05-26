@@ -4,4 +4,4 @@ HTML con Bootstrap y CSS
 Jquery
 Php
 MySql
-![atl text](http://nsoing.zapto.org/nsoing/img/nsoingIndex.png"Index")
+![Index](http://nsoing.zapto.org/nsoing/img/nsoingIndex.png)
