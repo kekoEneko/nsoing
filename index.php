@@ -1,9 +1,4 @@
-<?php 
-include("conexion.php");
-if(isset($_GET["errorea"])){
-  $errorea=$_GET["errorea"];
-  echo($errorea);
-}
+
   if(isset($_POST["btnLogin"])){
     $userUser=$_POST["txtUser"];
     $userPassword=$_POST["txtPassword"];
