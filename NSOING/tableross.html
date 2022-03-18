@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>NSOING &mdash; Your NSO Site.</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700,900|Oswald:400,700" SameSite=None> 
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/crono.js"></script>   <!-- SCRIP CRONO -->
+   <!--  <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="css/mediaelementplayer.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="css/fl-bigmug-line.css"> -->
+    
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    
+  </head>
+  <body>
+
+    <!-- MENU -->
+
+  
+
+
+    <!-- PAGINA -->
+
+    <div class="site-section">
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+        <div class="row bout-layer" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-12">
+            <div class="row align-items-top justify-content-between" >
+              <div class=col-3><p class="titulo0">Operator Panel<span class="text-primary">.</span></p></div>
+              <div class="col-1"><button class="btn btn-dark btn-gris" id="btnTeam">Teams</button></div>
+              <div class="col-1"><button class="btn btn-dark btn-gris" id="btnNso">&nbsp;&nbsp;NSO&nbsp;&nbsp;</button></div>
+              <div class="col-1"><button class="btn btn-dark btn-gris" id="btnRef">Referee</button></div>
+              <div class="col-1"><button class="btn btn-dark btn-gris" id="btnConfig" data-toggle="modal" data-target=".modalConfig">&nbsp;Config&nbsp;</button></div>
+              <div class="col-1"><button type="Reset" class="btn btn-primary btn-rosa" id="btnReset">Reset</button></div>
+              
+              <div class="col-2"><button type="submit" class="btn btn-primary btn-rosa" id="btnSave">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Save &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button></div>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="form-group">
+              <div class="row bout-layer justify-content-around"data-aos="fade-up" data-aos-delay="100" >
+                <div class="col-12">
+                  <div class="row justify-content-around" id="controlCronos">
+
+                    <div class="col-3 marcador">
+                      <div class="row justify-content-center bout-layer ">
+                        <h4 id="titlePeriod" class="controlTitle tituloMarcador" >PERIOD</h4>
+                        <div class="col-12 marcador">
+                          <div class="row justify-content-between marcador">
+                            <div class="text-center col-8">
+                              <span id="minutePeriod" class="text-dark classPeriod reloj marcador">30</span>
+                              <span class="text-dark classPeriod reloj marcador">:</span>
+                              <span id="secondPeriod" class="text-dark classPeriod reloj marcador">00</span>
+                              </div>
+                              <div class="col-4 marcador mt-4 pl-4 layerBotones">
+                                <button type="button" id="" class="btn btn-primary btn-propio btn-marcador">+ 1s</button>
+                                <button type="button" id="" class="btn btn-dark btn-propio btn-marcador">- 1s</button>
+                                <button type="button" id="" class="btn btn-primary btn-propio btn-marcador">+ 5s</button>
+                                <button type="button" id="" class="btn btn-dark btn-propio btn-marcador">- 5s</button> 
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-3 marcador">
+                      <div class="row justify-content-center bout-layer ">
+                        <h4 id="titlePeriod" class="controlTitle tituloMarcador" >TEAM TIMEOUT</h4>
+                        <div class="col-12 marcador">
+                          <div class="row justify-content-between marcador">
+                            <div class="text-center col-8">
+                              <span id="minuteTimeout" class="text-dark classTimeout reloj marcador">01</span>
+                              <span class="text-dark classTimeout reloj marcador">:</span>
+                              <span id="secondTimeout" class="text-dark classTimeout reloj marcador">00</span>
+                              </div>
+                              <div class="col-4 marcador mt-4 pl-4 layerBotones">
+                                <button type="button" id="" class="btn btn-primary btn-propio btn-marcador">+ 1s</button>
+                                <button type="button" id="" class="btn btn-dark btn-propio btn-marcador">- 1s</button>
+                                <button type="button" id="" class="btn btn-primary btn-propio btn-marcador">+ 5s</button>
+                                <button type="button" id="" class="btn btn-dark btn-propio btn-marcador">- 5s</button> 
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-3 marcador">
+                      <div class="row justify-content-center bout-layer ">
+                        <h4 id="titlePeriod" class="controlTitle tituloMarcador" >OFFICIALS <small> Reviwe & TimeOut</small></h4>
+                        <div class="col-12 marcador">
+                          <div class="row justify-content-between marcador">
+                            <div class="text-center col-8">
+                              <span id="minuteOfficial" class="text-dark classOfficial reloj marcador">00</span>
+                              <span class="text-dark classOfficial reloj marcador">:</span>
+                              <span id="secondOfficial" class="text-dark classOfficial reloj marcador">00</span>
+                              </div>
+                              <div class="col-4 marcador mt-4 pl-4 layerBotones">
+                                <button type="button" id="" class="btn btn-primary btn-propio btn-marcador">+ 1s</button>
+                                <button type="button" id="" class="btn btn-dark btn-propio btn-marcador">- 1s</button>
+                                <button type="button" id="" class="btn btn-primary btn-propio btn-marcador">+ 5s</button>
+                                <button type="button" id="" class="btn btn-dark btn-propio btn-marcador">- 5s</button> 
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-3 marcador">
+                      <div class="row justify-content-center bout-layer ">
+                        <h4 id="titlePeriod" class="controlTitle tituloMarcador" >INTERMISSION</h4>
+                        <div class="col-12 marcador">
+                          <div class="row justify-content-between marcador">
+                            <div class="text-center col-8">
+                              <span id="minuteIntermission" class="text-dark classIntermission reloj marcador">15</span>
+                              <span class="text-dark classIntermission reloj marcador">:</span>
+                              <span id="secondIntermission" class="text-dark classIntermission reloj marcador">00</span>
+                              </div>
+                              <div class="col-4 marcador mt-4 pl-4 layerBotones">
+                                <button type="button" id="" class="btn btn-primary btn-propio btn-marcador">+ 1s</button>
+                                <button type="button" id="" class="btn btn-dark btn-propio btn-marcador">- 1s</button>
+                                <button type="button" id="" class="btn btn-primary btn-propio btn-marcador">+ 5s</button>
+                                <button type="button" id="" class="btn btn-dark btn-propio btn-marcador">- 5s</button> 
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-3 marcador">
+                      <div class="row justify-content-center bout-layer ">
+                        <h4 id="titlePeriod" class="controlTitle tituloMarcador" >JAM</h4>
+                        <div class="col-12 marcador">
+                          <div class="row justify-content-between marcador">
+                            <div class="text-center col-8">
+                              <span id="minuteJam" class="text-dark classJam reloj marcador">02</span>
+                              <span class="text-dark classJam reloj marcador">:</span>
+                              <span id="secondJam" class="text-dark classJam reloj marcador">00</span>
+                              </div>
+                              <div class="col-4 marcador mt-4 pl-4 layerBotones">
+                                <button type="button" id="" class="btn btn-primary btn-propio btn-marcador">+ 1s</button>
+                                <button type="button" id="" class="btn btn-dark btn-propio btn-marcador">- 1s</button>
+                                <button type="button" id="" class="btn btn-primary btn-propio btn-marcador">+ 5s</button>
+                                <button type="button" id="" class="btn btn-dark btn-propio btn-marcador">- 5s</button> 
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="col-3 marcador">
+                      <div class="row justify-content-center bout-layer ">
+                        <h4 id="titlePeriod" class="controlTitle tituloMarcador" >LINE UP</h4>
+                        <div class="col-12 marcador">
+                          <div class="row justify-content-between marcador">
+                            <div class="text-center col-8">
+                              <span id="minuteLineup" class="text-dark classLineup reloj marcador">00</span>
+                              <span class="text-dark classLineup reloj marcador">:</span>
+                              <span id="secondLineup" class="text-dark classLineup reloj marcador">30</span>
+                              </div>
+                              <div class="col-4 marcador mt-4 pl-4 layerBotones">
+                                <button type="button" id="" class="btn btn-primary btn-propio btn-marcador">+ 1s</button>
+                                <button type="button" id="" class="btn btn-dark btn-propio btn-marcador">- 1s</button>
+                                <button type="button" id="" class="btn btn-primary btn-propio btn-marcador">+ 5s</button>
+                                <button type="button" id="" class="btn btn-dark btn-propio btn-marcador">- 5s</button> 
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                    
+                  
+                    
+            
+                  </div>  
+
+
+                  <div class="row justify-content-between" id="controlEquipos">
+
+                    <div class="col-6">                      
+                      <div class="row justify-content-between bout-layer">
+                        <div class="col-12">
+                          <div class="row justify-content-center layerColor" style="background-color: rgba(242,43,40,0.5)">
+                            <div class="col-7 col-lg-8">
+                              <h2>Local</h2>
+                              <h3>Easo Hooks</h3>
+                            </div>
+                            <div class="col-5 col-lg-4">
+                              <label for="" class="lblPuntos">120</label>                            
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-12">
+                          <div class="row justify-content-center">
+                            <div class="col-7 marcador">
+                              <div class="row bout-layer justify-content-between">
+                              <button type="button" id="" class="btn btn-dark btn-propio btn-lead">Lost</button>
+                              <button type="button" id="" class="btn btn-primary btn-propio btn-lead">Lead</button>
+                              <button type="button" id="" class="btn btn-dark btn-propio btn-lead">Call</button> <!-- If leadStatus,call>primary/N I disabled. -->
+                              <button type="button" id="" class="btn btn-dark btn-propio btn-lead">Inj</button>
+                              <button type="button" id="" class="btn btn-dark btn-propio btn-lead">N I</button>
+                            </div></div>
+                            <div class="col-5 marcador">
+                              <div class="row bout-layer justify-content-between">
+                              <button type="button" id="" class="btn btn-primary btn-propio btn-puntos">+ 1</button>
+                              <button type="button" id="" class="btn btn-primary btn-propio btn-puntos">+ 4</button>
+                              <button type="button" id="" class="btn btn-dark btn-propio btn-puntos">- 1</button>
+                              <button type="button" id="" class="btn btn-dark btn-propio btn-puntos">- 4</button>
+                            </div></div>
+                            
+                            <div class="col-11 stats" id="statsScore"><p> #05  X  X     4       4       4      2</p></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-6">                      
+                      <div class="row justify-content-between bout-layer">
+                        <div class="col-12">
+                          <div class="row justify-content-center layerColor" style="background-color: rgba(39,117,232,0.5)">
+                            <div class="col-7">
+                              <h2>Visitor</h2>
+                              <h3>Ingles de Acero</h3>
+                            </div>
+                            <div class="col-3">
+                              <label for="" class="lblPuntos">120</label>                            
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-12">
+                          <div class="row justify-content-center">
+                            <div class="col-7 marcador">
+                              <div class="row bout-layer justify-content-between">
+                              <button type="button" id="" class="btn btn-dark btn-propio btn-lead">Lost</button>
+                              <button type="button" id="" class="btn btn-primary btn-propio btn-lead">Lead</button>
+                              <button type="button" id="" class="btn btn-dark btn-propio btn-lead">Call</button> <!-- If leadStatus,call>primary/N I disabled. -->
+                              <button type="button" id="" class="btn btn-dark btn-propio btn-lead">Inj</button>
+                              <button type="button" id="" class="btn btn-dark btn-propio btn-lead">N I</button>
+                            </div></div>
+                            <div class="col-5 marcador">
+                              <div class="row bout-layer justify-content-between">
+                              <button type="button" id="" class="btn btn-primary btn-propio btn-puntos">+ 1</button>
+                              <button type="button" id="" class="btn btn-primary btn-propio btn-puntos">+ 4</button>
+                              <button type="button" id="" class="btn btn-dark btn-propio btn-puntos">- 1</button>
+                              <button type="button" id="" class="btn btn-dark btn-propio btn-puntos">- 4</button>
+                            </div></div>
+                            
+                            <div class="col-11 stats" id="statsScore"></div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="col-12">
+                      <div class="row justify-content-between">
+                        <div class="col-1"><span id="btnTimmer">Regular Timmer</span></div>
+                      <div class="col-3 layerTimer">
+                        <div class="row justify-content-around bout-layer">
+                        <button type="button" id="btnLocalTomeput" class="btn btn-dark btn-propio btn-teams">TimeOut</button>
+                        <button type="button" id="btnLocalOfficial" class="btn btn-dark btn-propio btn-teams">Off. Review</button>
+                      </div>
+                      </div>
+                      <div class="col-5 layerTimer">
+                        <div class="row justify-content-around bout-layer">
+                        <button type="button" id="btnStart" class="btn btn-primary btn-propio btn-teams">Start Jam</button>
+                        <button type="button" id="btnOfficial" class="btn btn-primary btn-propio btn-teams">Off. Timeut</button>
+                      </div>
+                      </div>
+                      <div class="col-3 layerTimer">
+                        <div class="row justify-content-around bout-layer">
+                        <button type="button" id="btnVisitorTimeout" class="btn btn-dark btn-propio btn-teams">TimeOut</button>
+                        <button type="button" id="btnVisitorOfficial" class="btn btn-dark btn-propio btn-teams">Off. Review</button>
+                      </div>
+                      </div>
+                    </div>
+                    </div>
+
+                  </div>    
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function(){
+       
+        //Control Cronometros
+        $("#btnStart").click(function(){
+          aktibatu('classJam')
+          aktibatu('classPeriod')
+          cronoPeriod();
+          cronoJam();
+        });
+
+
+
+
+
+
+        //Mostrar Mobile Control.
+        $("#btnTimmer").click(function(){
+          if ($("#btnTimmer").text()=="Regular Timmer"){
+          $(".layerTimer").show();
+          $("#btnTimmer").text("Mobile Control");
+        }else{
+          $(".layerTimer").hide();
+          $("#btnTimmer").text("Regular Timmer");
+        }
+      });
+        
+
+        
+      });
+    </script>
+
+
+
+
+
+
+      <!-- FIN PAGINA -->
+
+
+
+      <footer class="site-footer">
+
+      </footer>
+
+    </div>
+
+    <!-- <script src="js/jquery-3.3.1.min.js"></script>  -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/mediaelement-and-player.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/jquery.countdown.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/bootstrap-datepicker.min.js"></script>
+    <script src="js/aos.js"></script>
+    <!-- <script src="js/circleaudioplayer.js"></script> -->
+
+    <script src="js/main.js"></script>
+    
+  </body>
+  </html>
